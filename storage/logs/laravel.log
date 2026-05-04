@@ -1,0 +1,667 @@
+[2026-04-28 01:06:00] local.ERROR: Please provide a valid cache path. {"exception":"[object] (InvalidArgumentException(code: 0): Please provide a valid cache path. at C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67)
+[stacktrace]
+#0 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate/View/Compilers/Compiler->__construct(Object(Illuminate/Filesystem/Filesystem), false, '', true, 'php')
+#1 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Container/Container.php(908): Illuminate/View/ViewServiceProvider->{closure:Illuminate/View/ViewServiceProvider::registerBladeCompiler():96}(Object(Illuminate/Foundation/Application), Array)
+#2 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Container/Container.php(795): Illuminate/Container/Container->build(Object(Closure))
+#3 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(986): Illuminate/Container/Container->resolve('blade.compiler', Array, true)
+#4 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Container/Container.php(731): Illuminate/Foundation/Application->resolve('blade.compiler', Array)
+#5 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(971): Illuminate/Container/Container->make('blade.compiler', Array)
+#6 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(168): Illuminate/Foundation/Application->make('blade.compiler')
+#7 [internal function]: Illuminate/View/ViewServiceProvider->{closure:Illuminate/View/ViewServiceProvider::registerBladeEngine():164}()
+#8 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Engines/EngineResolver.php(55): call_user_func(Object(Closure))
+#9 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Factory.php(310): Illuminate/View/Engines/EngineResolver->resolve('blade')
+#10 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Factory.php(274): Illuminate/View/Factory->getEngineFromPath('C://OSPanel//home//forumap.local//resources//views/topics/show.blade.php')
+#11 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Factory.php(146): Illuminate/View/Factory->viewInstance('topics.show', 'C://OSPanel//home//forumap.local//resources//views/topics/show.blade.php', Array)
+#12 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(1020): Illuminate/View/Factory->make('topics.show', Array, Array)
+#13 C:/OSPanel/home/forumap.local/app/Http/Controllers/TopicController.php(86): view('topics.show', Array)
+#14 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App/Http/Controllers/TopicController->show(Object(App/Models/Topic))
+#15 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(43): Illuminate/Routing/Controller->callAction('show', Array)
+#16 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Route.php(259): Illuminate/Routing/ControllerDispatcher->dispatch(Object(Illuminate/Routing/Route), Object(App/Http/Controllers/TopicController), 'show')
+#17 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate/Routing/Route->runController()
+#18 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(806): Illuminate/Routing/Route->run()
+#19 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Routing/Router->{closure:Illuminate/Routing/Router::runRouteWithinStack():805}(Object(Illuminate/Http/Request))
+#20 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#21 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#22 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#23 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/VerifyCsrfToken->handle(Object(Illuminate/Http/Request), Object(Closure))
+#24 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#25 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/View/Middleware/ShareErrorsFromSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#26 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#27 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate/Session/Middleware/StartSession->handleStatefulRequest(Object(Illuminate/Http/Request), Object(Illuminate/Session/Store), Object(Closure))
+#28 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Session/Middleware/StartSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#29 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#30 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle(Object(Illuminate/Http/Request), Object(Closure))
+#31 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#32 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/EncryptCookies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#33 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#34 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#35 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#36 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#37 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#38 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#39 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->{closure:Illuminate/Foundation/Http/Kernel::dispatchToRouter():197}(Object(Illuminate/Http/Request))
+#40 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#41 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#42 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#43 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#44 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#45 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#46 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#47 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#48 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#49 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#50 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#51 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#52 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#53 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#54 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#55 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#56 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#57 C:/OSPanel/home/forumap.local/public/index.php(51): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#58 {main}
+"} 
+[2026-04-28 01:06:00] local.ERROR: file_put_contents(C:\OSPanel\home\forumap.local\storage\framework/sessions/lb1EssthyYB2h8oLkiAE8Yj1lepbJ8HBJkCwcCOP): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): file_put_contents(C:\\OSPanel\\home\\forumap.local\\storage\\framework/sessions/lb1EssthyYB2h8oLkiAE8Yj1lepbJ8HBJkCwcCOP): Failed to open stream: No such file or directory at C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:204)
+[stacktrace]
+#0 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(255): Illuminate/Foundation/Bootstrap/HandleExceptions->handleError(2, 'file_put_contents(C://OSPanel//home//forumap.local//storage//framework/sessions/lb1EssthyYB2h8oLkiAE8Yj1lepbJ8HBJkCwcCOP): Failed to open stream: No such file or directory', 'C://OSPanel//home//forumap.local//vendor//laravel//framework//src//Illuminate//Filesystem//Filesystem.php', 204)
+#1 [internal function]: Illuminate/Foundation/Bootstrap/HandleExceptions->{closure:Illuminate/Foundation/Bootstrap/HandleExceptions::forwardsTo():254}(2, 'file_put_contents(C://OSPanel//home//forumap.local//storage//framework/sessions/lb1EssthyYB2h8oLkiAE8Yj1lepbJ8HBJkCwcCOP): Failed to open stream: No such file or directory', 'C://OSPanel//home//forumap.local//vendor//laravel//framework//src//Illuminate//Filesystem//Filesystem.php', 204)
+#2 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(204): file_put_contents('C://OSPanel//home//forumap.local//storage//framework/sessions/lb1EssthyYB2h8oLkiAE8Yj1lepbJ8HBJkCwcCOP', 'a:3:{s:6:\"_token\";s:40:\"cd3AbrDz1jSbQcSHjvnjj5MHisll7Bj8pj43UY2N\";s:9:\"_previous\";a:1:{s:3:\"url\";s:35:\"https://www.forumap.local/topics/29\";}s:6:\"_flash\";a:2:{s:3:\"old\";a:0:{}s:3:\"new\";a:0:{}}}', 2)
+#3 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(90): Illuminate/Filesystem/Filesystem->put('C://OSPanel//home//forumap.local//storage//framework/sessions/lb1EssthyYB2h8oLkiAE8Yj1lepbJ8HBJkCwcCOP', 'a:3:{s:6:\"_token\";s:40:\"cd3AbrDz1jSbQcSHjvnjj5MHisll7Bj8pj43UY2N\";s:9:\"_previous\";a:1:{s:3:\"url\";s:35:\"https://www.forumap.local/topics/29\";}s:6:\"_flash\";a:2:{s:3:\"old\";a:0:{}s:3:\"new\";a:0:{}}}', true)
+#4 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Store.php(172): Illuminate/Session/FileSessionHandler->write('lb1EssthyYB2h8oLkiAE8Yj1lepbJ8HBJkCwcCOP', 'a:3:{s:6:\"_token\";s:40:\"cd3AbrDz1jSbQcSHjvnjj5MHisll7Bj8pj43UY2N\";s:9:\"_previous\";a:1:{s:3:\"url\";s:35:\"https://www.forumap.local/topics/29\";}s:6:\"_flash\";a:2:{s:3:\"old\";a:0:{}s:3:\"new\";a:0:{}}}')
+#5 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(245): Illuminate/Session/Store->save()
+#6 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(130): Illuminate/Session/Middleware/StartSession->saveSession(Object(Illuminate/Http/Request))
+#7 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate/Session/Middleware/StartSession->handleStatefulRequest(Object(Illuminate/Http/Request), Object(Illuminate/Session/Store), Object(Closure))
+#8 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Session/Middleware/StartSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#9 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#10 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle(Object(Illuminate/Http/Request), Object(Closure))
+#11 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#12 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/EncryptCookies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#13 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#14 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#15 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#16 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#17 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#18 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#19 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->{closure:Illuminate/Foundation/Http/Kernel::dispatchToRouter():197}(Object(Illuminate/Http/Request))
+#20 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#21 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#22 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#23 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#24 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#25 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#26 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#27 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#28 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#29 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#30 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#31 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#32 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#33 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#34 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#35 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#36 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#37 C:/OSPanel/home/forumap.local/public/index.php(51): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#38 {main}
+"} 
+[2026-04-28 01:06:14] local.ERROR: Please provide a valid cache path. {"exception":"[object] (InvalidArgumentException(code: 0): Please provide a valid cache path. at C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67)
+[stacktrace]
+#0 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate/View/Compilers/Compiler->__construct(Object(Illuminate/Filesystem/Filesystem), false, '', true, 'php')
+#1 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Container/Container.php(908): Illuminate/View/ViewServiceProvider->{closure:Illuminate/View/ViewServiceProvider::registerBladeCompiler():96}(Object(Illuminate/Foundation/Application), Array)
+#2 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Container/Container.php(795): Illuminate/Container/Container->build(Object(Closure))
+#3 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(986): Illuminate/Container/Container->resolve('blade.compiler', Array, true)
+#4 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Container/Container.php(731): Illuminate/Foundation/Application->resolve('blade.compiler', Array)
+#5 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(971): Illuminate/Container/Container->make('blade.compiler', Array)
+#6 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(168): Illuminate/Foundation/Application->make('blade.compiler')
+#7 [internal function]: Illuminate/View/ViewServiceProvider->{closure:Illuminate/View/ViewServiceProvider::registerBladeEngine():164}()
+#8 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Engines/EngineResolver.php(55): call_user_func(Object(Closure))
+#9 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Factory.php(310): Illuminate/View/Engines/EngineResolver->resolve('blade')
+#10 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Factory.php(274): Illuminate/View/Factory->getEngineFromPath('C://OSPanel//home//forumap.local//resources//views/pages/home.blade.php')
+#11 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Factory.php(146): Illuminate/View/Factory->viewInstance('pages.home', 'C://OSPanel//home//forumap.local//resources//views/pages/home.blade.php', Array)
+#12 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(1020): Illuminate/View/Factory->make('pages.home', Array, Array)
+#13 C:/OSPanel/home/forumap.local/app/Http/Controllers/PageController.php(12): view('pages.home')
+#14 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App/Http/Controllers/PageController->home()
+#15 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(43): Illuminate/Routing/Controller->callAction('home', Array)
+#16 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Route.php(259): Illuminate/Routing/ControllerDispatcher->dispatch(Object(Illuminate/Routing/Route), Object(App/Http/Controllers/PageController), 'home')
+#17 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate/Routing/Route->runController()
+#18 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(806): Illuminate/Routing/Route->run()
+#19 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Routing/Router->{closure:Illuminate/Routing/Router::runRouteWithinStack():805}(Object(Illuminate/Http/Request))
+#20 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#21 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#22 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#23 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/VerifyCsrfToken->handle(Object(Illuminate/Http/Request), Object(Closure))
+#24 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#25 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/View/Middleware/ShareErrorsFromSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#26 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#27 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate/Session/Middleware/StartSession->handleStatefulRequest(Object(Illuminate/Http/Request), Object(Illuminate/Session/Store), Object(Closure))
+#28 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Session/Middleware/StartSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#29 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#30 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle(Object(Illuminate/Http/Request), Object(Closure))
+#31 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#32 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/EncryptCookies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#33 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#34 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#35 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#36 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#37 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#38 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#39 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->{closure:Illuminate/Foundation/Http/Kernel::dispatchToRouter():197}(Object(Illuminate/Http/Request))
+#40 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#41 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#42 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#43 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#44 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#45 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#46 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#47 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#48 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#49 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#50 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#51 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#52 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#53 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#54 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#55 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#56 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#57 C:/OSPanel/home/forumap.local/public/index.php(51): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#58 {main}
+"} 
+[2026-04-28 01:06:14] local.ERROR: file_put_contents(C:\OSPanel\home\forumap.local\storage\framework/sessions/Gq7rPKf5ZF6VhCPln9goT4lTECj0XJWGDqMyc7Ug): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): file_put_contents(C:\\OSPanel\\home\\forumap.local\\storage\\framework/sessions/Gq7rPKf5ZF6VhCPln9goT4lTECj0XJWGDqMyc7Ug): Failed to open stream: No such file or directory at C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:204)
+[stacktrace]
+#0 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(255): Illuminate/Foundation/Bootstrap/HandleExceptions->handleError(2, 'file_put_contents(C://OSPanel//home//forumap.local//storage//framework/sessions/Gq7rPKf5ZF6VhCPln9goT4lTECj0XJWGDqMyc7Ug): Failed to open stream: No such file or directory', 'C://OSPanel//home//forumap.local//vendor//laravel//framework//src//Illuminate//Filesystem//Filesystem.php', 204)
+#1 [internal function]: Illuminate/Foundation/Bootstrap/HandleExceptions->{closure:Illuminate/Foundation/Bootstrap/HandleExceptions::forwardsTo():254}(2, 'file_put_contents(C://OSPanel//home//forumap.local//storage//framework/sessions/Gq7rPKf5ZF6VhCPln9goT4lTECj0XJWGDqMyc7Ug): Failed to open stream: No such file or directory', 'C://OSPanel//home//forumap.local//vendor//laravel//framework//src//Illuminate//Filesystem//Filesystem.php', 204)
+#2 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(204): file_put_contents('C://OSPanel//home//forumap.local//storage//framework/sessions/Gq7rPKf5ZF6VhCPln9goT4lTECj0XJWGDqMyc7Ug', 'a:3:{s:6:\"_token\";s:40:\"vDa9ou0PlUmaXSuF3K6FeQjbHBZY20X9bntsnbvf\";s:9:\"_previous\";a:1:{s:3:\"url\";s:21:\"https://forumap.local\";}s:6:\"_flash\";a:2:{s:3:\"old\";a:0:{}s:3:\"new\";a:0:{}}}', 2)
+#3 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(90): Illuminate/Filesystem/Filesystem->put('C://OSPanel//home//forumap.local//storage//framework/sessions/Gq7rPKf5ZF6VhCPln9goT4lTECj0XJWGDqMyc7Ug', 'a:3:{s:6:\"_token\";s:40:\"vDa9ou0PlUmaXSuF3K6FeQjbHBZY20X9bntsnbvf\";s:9:\"_previous\";a:1:{s:3:\"url\";s:21:\"https://forumap.local\";}s:6:\"_flash\";a:2:{s:3:\"old\";a:0:{}s:3:\"new\";a:0:{}}}', true)
+#4 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Store.php(172): Illuminate/Session/FileSessionHandler->write('Gq7rPKf5ZF6VhCPln9goT4lTECj0XJWGDqMyc7Ug', 'a:3:{s:6:\"_token\";s:40:\"vDa9ou0PlUmaXSuF3K6FeQjbHBZY20X9bntsnbvf\";s:9:\"_previous\";a:1:{s:3:\"url\";s:21:\"https://forumap.local\";}s:6:\"_flash\";a:2:{s:3:\"old\";a:0:{}s:3:\"new\";a:0:{}}}')
+#5 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(245): Illuminate/Session/Store->save()
+#6 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(130): Illuminate/Session/Middleware/StartSession->saveSession(Object(Illuminate/Http/Request))
+#7 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate/Session/Middleware/StartSession->handleStatefulRequest(Object(Illuminate/Http/Request), Object(Illuminate/Session/Store), Object(Closure))
+#8 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Session/Middleware/StartSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#9 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#10 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle(Object(Illuminate/Http/Request), Object(Closure))
+#11 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#12 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/EncryptCookies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#13 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#14 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#15 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#16 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#17 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#18 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#19 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->{closure:Illuminate/Foundation/Http/Kernel::dispatchToRouter():197}(Object(Illuminate/Http/Request))
+#20 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#21 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#22 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#23 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#24 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#25 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#26 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#27 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#28 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#29 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#30 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#31 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#32 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#33 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#34 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#35 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#36 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#37 C:/OSPanel/home/forumap.local/public/index.php(51): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#38 {main}
+"} 
+[2026-04-28 12:21:45] local.ERROR: Target class [App\Http\Controllers\SupportController] does not exist. {"userId":5,"exception":"[object] (Illuminate\\Contracts\\Container\\BindingResolutionException(code: 0): Target class [App\\Http\\Controllers\\SupportController] does not exist. at C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Container/Container.php:914)
+[stacktrace]
+#0 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Container/Container.php(795): Illuminate/Container/Container->build('App//Http//Controllers//SupportController')
+#1 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(986): Illuminate/Container/Container->resolve('App//Http//Controllers//SupportController', Array, true)
+#2 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Container/Container.php(731): Illuminate/Foundation/Application->resolve('App//Http//Controllers//SupportController', Array)
+#3 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(971): Illuminate/Container/Container->make('App//Http//Controllers//SupportController', Array)
+#4 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Route.php(278): Illuminate/Foundation/Application->make('App//Http//Controllers//SupportController')
+#5 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Route.php(260): Illuminate/Routing/Route->getController()
+#6 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate/Routing/Route->runController()
+#7 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(806): Illuminate/Routing/Route->run()
+#8 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Routing/Router->{closure:Illuminate/Routing/Router::runRouteWithinStack():805}(Object(Illuminate/Http/Request))
+#9 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#10 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#11 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#12 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/VerifyCsrfToken->handle(Object(Illuminate/Http/Request), Object(Closure))
+#13 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#14 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/View/Middleware/ShareErrorsFromSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#15 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#16 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate/Session/Middleware/StartSession->handleStatefulRequest(Object(Illuminate/Http/Request), Object(Illuminate/Session/Store), Object(Closure))
+#17 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Session/Middleware/StartSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#18 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#19 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle(Object(Illuminate/Http/Request), Object(Closure))
+#20 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#21 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/EncryptCookies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#22 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#23 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#24 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#25 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#26 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#27 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#28 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->{closure:Illuminate/Foundation/Http/Kernel::dispatchToRouter():197}(Object(Illuminate/Http/Request))
+#29 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#30 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#31 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#32 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#33 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#34 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#35 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#36 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#37 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#38 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#39 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#40 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#41 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#42 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#43 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#44 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#45 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#46 C:/OSPanel/home/forumap.local/public/index.php(51): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#47 {main}
+
+[previous exception] [object] (ReflectionException(code: -1): Class \"App\\Http\\Controllers\\SupportController\" does not exist at C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Container/Container.php:912)
+[stacktrace]
+#0 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Container/Container.php(912): ReflectionClass->__construct('App//Http//Controllers//SupportController')
+#1 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Container/Container.php(795): Illuminate/Container/Container->build('App//Http//Controllers//SupportController')
+#2 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(986): Illuminate/Container/Container->resolve('App//Http//Controllers//SupportController', Array, true)
+#3 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Container/Container.php(731): Illuminate/Foundation/Application->resolve('App//Http//Controllers//SupportController', Array)
+#4 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(971): Illuminate/Container/Container->make('App//Http//Controllers//SupportController', Array)
+#5 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Route.php(278): Illuminate/Foundation/Application->make('App//Http//Controllers//SupportController')
+#6 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Route.php(260): Illuminate/Routing/Route->getController()
+#7 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate/Routing/Route->runController()
+#8 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(806): Illuminate/Routing/Route->run()
+#9 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Routing/Router->{closure:Illuminate/Routing/Router::runRouteWithinStack():805}(Object(Illuminate/Http/Request))
+#10 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#11 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#12 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#13 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/VerifyCsrfToken->handle(Object(Illuminate/Http/Request), Object(Closure))
+#14 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#15 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/View/Middleware/ShareErrorsFromSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#16 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#17 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate/Session/Middleware/StartSession->handleStatefulRequest(Object(Illuminate/Http/Request), Object(Illuminate/Session/Store), Object(Closure))
+#18 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Session/Middleware/StartSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#19 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#20 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle(Object(Illuminate/Http/Request), Object(Closure))
+#21 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#22 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/EncryptCookies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#23 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#24 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#25 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#26 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#27 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#28 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#29 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->{closure:Illuminate/Foundation/Http/Kernel::dispatchToRouter():197}(Object(Illuminate/Http/Request))
+#30 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#31 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#32 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#33 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#34 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#35 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#36 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#37 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#38 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#39 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#40 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#41 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#42 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#43 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#44 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#45 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#46 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#47 C:/OSPanel/home/forumap.local/public/index.php(51): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#48 {main}
+"} 
+[2026-04-30 09:25:29] local.ERROR: Class "App\Http\Controllers\Admin\Hash" not found {"userId":4,"exception":"[object] (Error(code: 0): Class \"App\\Http\\Controllers\\Admin\\Hash\" not found at C:/OSPanel/home/forumap.local/app/Http/Controllers/Admin/AdminUserController.php:63)
+[stacktrace]
+#0 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App/Http/Controllers/Admin/AdminUserController->changePassword(Object(Illuminate/Http/Request), '6')
+#1 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(43): Illuminate/Routing/Controller->callAction('changePassword', Array)
+#2 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Route.php(259): Illuminate/Routing/ControllerDispatcher->dispatch(Object(Illuminate/Routing/Route), Object(App/Http/Controllers/Admin/AdminUserController), 'changePassword')
+#3 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate/Routing/Route->runController()
+#4 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(806): Illuminate/Routing/Route->run()
+#5 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Routing/Router->{closure:Illuminate/Routing/Router::runRouteWithinStack():805}(Object(Illuminate/Http/Request))
+#6 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#7 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#8 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#9 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/VerifyCsrfToken->handle(Object(Illuminate/Http/Request), Object(Closure))
+#10 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#11 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/View/Middleware/ShareErrorsFromSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#12 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#13 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate/Session/Middleware/StartSession->handleStatefulRequest(Object(Illuminate/Http/Request), Object(Illuminate/Session/Store), Object(Closure))
+#14 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Session/Middleware/StartSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#15 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#16 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle(Object(Illuminate/Http/Request), Object(Closure))
+#17 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#18 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/EncryptCookies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#19 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#20 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#21 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#22 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#23 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#24 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#25 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->{closure:Illuminate/Foundation/Http/Kernel::dispatchToRouter():197}(Object(Illuminate/Http/Request))
+#26 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#27 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#28 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#29 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#30 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#31 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#32 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#33 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#34 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#35 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#36 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#37 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#38 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#39 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#40 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#41 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#42 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#43 C:/OSPanel/home/forumap.local/public/index.php(51): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#44 {main}
+"} 
+[2026-04-30 09:28:26] local.ERROR: Route [admin.users.password] not defined. {"view":{"view":"C:\\OSPanel\\home\\forumap.local\\resources\\views\\admin\\users\\index.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-986419193 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#335</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-986419193\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","users":"<pre class=sf-dump id=sf-dump-1464877764 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Database\\Eloquent\\Collection</span> {<a class=sf-dump-ref>#1054</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">items</span>: <span class=sf-dump-note>array:3</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"App\\Models\\User
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">App\\Models</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">User</span></span> {<a class=sf-dump-ref>#1056</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"5 characters\">users</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+      +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+      +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+      +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:18</span> [ &#8230;18]
+      #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:18</span> [ &#8230;18]
+      #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">casts</span>: <span class=sf-dump-note>array:4</span> [ &#8230;4]
+      #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+      +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">usesUniqueIds</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: <span class=sf-dump-note>array:11</span> [ &#8230;11]
+      #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      #<span class=sf-dump-protected title=\"Protected property\">rememberTokenName</span>: \"<span class=sf-dump-str title=\"14 characters\">remember_token</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">accessToken</span>: <span class=sf-dump-const>null</span>
+    </samp>}
+    <span class=sf-dump-index>1</span> => <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"App\\Models\\User
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">App\\Models</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">User</span></span> {<a class=sf-dump-ref>#1057</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"5 characters\">users</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+      +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+      +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+      +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:18</span> [ &#8230;18]
+      #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:18</span> [ &#8230;18]
+      #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">casts</span>: <span class=sf-dump-note>array:4</span> [ &#8230;4]
+      #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+      +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">usesUniqueIds</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: <span class=sf-dump-note>array:11</span> [ &#8230;11]
+      #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      #<span class=sf-dump-protected title=\"Protected property\">rememberTokenName</span>: \"<span class=sf-dump-str title=\"14 characters\">remember_token</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">accessToken</span>: <span class=sf-dump-const>null</span>
+    </samp>}
+    <span class=sf-dump-index>2</span> => <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"App\\Models\\User
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">App\\Models</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">User</span></span> {<a class=sf-dump-ref>#1058</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"5 characters\">users</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+      +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+      +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+      +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:18</span> [ &#8230;18]
+      #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:18</span> [ &#8230;18]
+      #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">casts</span>: <span class=sf-dump-note>array:4</span> [ &#8230;4]
+      #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+      +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">usesUniqueIds</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: <span class=sf-dump-note>array:11</span> [ &#8230;11]
+      #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      #<span class=sf-dump-protected title=\"Protected property\">rememberTokenName</span>: \"<span class=sf-dump-str title=\"14 characters\">remember_token</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">accessToken</span>: <span class=sf-dump-const>null</span>
+    </samp>}
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1464877764\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"userId":4,"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Route [admin.users.password] not defined. at C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:477)
+[stacktrace]
+#0 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(811): Illuminate/Routing/UrlGenerator->route('admin.users.password', 5, true)
+#1 C:/OSPanel/home/forumap.local/resources/views/admin/users/index.blade.php(71): route('admin.users.password', 5)
+#2 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('C://OSPanel//home//forumap.local//storage//framework//views//5efe28fddaa03e7148ac35d298aa4e43.php')
+#3 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate/Filesystem/Filesystem::{closure:Illuminate/Filesystem/Filesystem::getRequire():120}()
+#4 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate/Filesystem/Filesystem->getRequire('C://OSPanel//home//forumap.local//storage//framework//views/5efe28fddaa03e7148ac35d298aa4e43.php', Array)
+#5 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(72): Illuminate/View/Engines/PhpEngine->evaluatePath('C://OSPanel//home//forumap.local//storage//framework//views/5efe28fddaa03e7148ac35d298aa4e43.php', Array)
+#6 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/View.php(207): Illuminate/View/Engines/CompilerEngine->get('C://OSPanel//home//forumap.local//resources//views/admin/users/index.blade.php', Array)
+#7 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/View.php(190): Illuminate/View/View->getContents()
+#8 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/View.php(159): Illuminate/View/View->renderContents()
+#9 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate/View/View->render()
+#10 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate/Http/Response->setContent(Object(Illuminate/View/View))
+#11 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(918): Illuminate/Http/Response->__construct(Object(Illuminate/View/View), 200, Array)
+#12 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(885): Illuminate/Routing/Router::toResponse(Object(Illuminate/Http/Request), Object(Illuminate/View/View))
+#13 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate/Routing/Router->prepareResponse(Object(Illuminate/Http/Request), Object(Illuminate/View/View))
+#14 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Routing/Router->{closure:Illuminate/Routing/Router::runRouteWithinStack():805}(Object(Illuminate/Http/Request))
+#15 C:/OSPanel/home/forumap.local/app/Http/Middleware/AdminMiddleware.php(27): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#16 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): App/Http/Middleware/AdminMiddleware->handle(Object(Illuminate/Http/Request), Object(Closure))
+#17 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#18 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#19 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(57): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#20 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Auth/Middleware/Authenticate->handle(Object(Illuminate/Http/Request), Object(Closure))
+#21 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#22 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/VerifyCsrfToken->handle(Object(Illuminate/Http/Request), Object(Closure))
+#23 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#24 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/View/Middleware/ShareErrorsFromSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#25 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#26 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate/Session/Middleware/StartSession->handleStatefulRequest(Object(Illuminate/Http/Request), Object(Illuminate/Session/Store), Object(Closure))
+#27 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Session/Middleware/StartSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#28 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#29 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle(Object(Illuminate/Http/Request), Object(Closure))
+#30 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#31 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/EncryptCookies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#32 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#33 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#34 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#35 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#36 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#37 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#38 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->{closure:Illuminate/Foundation/Http/Kernel::dispatchToRouter():197}(Object(Illuminate/Http/Request))
+#39 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#40 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#41 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#42 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#43 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#44 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#45 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#46 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#47 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#48 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#49 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#50 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#51 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#52 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#53 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#54 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#55 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#56 C:/OSPanel/home/forumap.local/public/index.php(51): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#57 {main}
+
+[previous exception] [object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [admin.users.password] not defined. at C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:477)
+[stacktrace]
+#0 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(811): Illuminate/Routing/UrlGenerator->route('admin.users.password', 5, true)
+#1 C:/OSPanel/home/forumap.local/storage/framework/views/5efe28fddaa03e7148ac35d298aa4e43.php(72): route('admin.users.password', 5)
+#2 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('C://OSPanel//home//forumap.local//storage//framework//views//5efe28fddaa03e7148ac35d298aa4e43.php')
+#3 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate/Filesystem/Filesystem::{closure:Illuminate/Filesystem/Filesystem::getRequire():120}()
+#4 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate/Filesystem/Filesystem->getRequire('C://OSPanel//home//forumap.local//storage//framework//views/5efe28fddaa03e7148ac35d298aa4e43.php', Array)
+#5 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(72): Illuminate/View/Engines/PhpEngine->evaluatePath('C://OSPanel//home//forumap.local//storage//framework//views/5efe28fddaa03e7148ac35d298aa4e43.php', Array)
+#6 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/View.php(207): Illuminate/View/Engines/CompilerEngine->get('C://OSPanel//home//forumap.local//resources//views/admin/users/index.blade.php', Array)
+#7 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/View.php(190): Illuminate/View/View->getContents()
+#8 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/View.php(159): Illuminate/View/View->renderContents()
+#9 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate/View/View->render()
+#10 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate/Http/Response->setContent(Object(Illuminate/View/View))
+#11 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(918): Illuminate/Http/Response->__construct(Object(Illuminate/View/View), 200, Array)
+#12 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(885): Illuminate/Routing/Router::toResponse(Object(Illuminate/Http/Request), Object(Illuminate/View/View))
+#13 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate/Routing/Router->prepareResponse(Object(Illuminate/Http/Request), Object(Illuminate/View/View))
+#14 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Routing/Router->{closure:Illuminate/Routing/Router::runRouteWithinStack():805}(Object(Illuminate/Http/Request))
+#15 C:/OSPanel/home/forumap.local/app/Http/Middleware/AdminMiddleware.php(27): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#16 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): App/Http/Middleware/AdminMiddleware->handle(Object(Illuminate/Http/Request), Object(Closure))
+#17 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#18 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#19 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(57): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#20 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Auth/Middleware/Authenticate->handle(Object(Illuminate/Http/Request), Object(Closure))
+#21 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#22 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/VerifyCsrfToken->handle(Object(Illuminate/Http/Request), Object(Closure))
+#23 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#24 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/View/Middleware/ShareErrorsFromSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#25 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#26 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate/Session/Middleware/StartSession->handleStatefulRequest(Object(Illuminate/Http/Request), Object(Illuminate/Session/Store), Object(Closure))
+#27 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Session/Middleware/StartSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#28 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#29 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle(Object(Illuminate/Http/Request), Object(Closure))
+#30 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#31 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/EncryptCookies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#32 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#33 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#34 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#35 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#36 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#37 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#38 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->{closure:Illuminate/Foundation/Http/Kernel::dispatchToRouter():197}(Object(Illuminate/Http/Request))
+#39 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#40 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#41 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#42 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#43 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#44 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#45 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#46 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#47 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#48 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#49 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#50 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#51 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#52 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#53 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#54 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#55 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#56 C:/OSPanel/home/forumap.local/public/index.php(51): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#57 {main}
+"} 
+[2026-04-30 12:29:49] local.ERROR: Connection could not be established with host "mailpit:1025": stream_socket_client(): php_network_getaddresses: getaddrinfo for mailpit failed: Этот хост неизвестен {"exception":"[object] (Symfony\\Component\\Mailer\\Exception\\TransportException(code: 0): Connection could not be established with host \"mailpit:1025\": stream_socket_client(): php_network_getaddresses: getaddrinfo for mailpit failed: Этот хост неизвестен at C:/OSPanel/home/forumap.local/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php:154)
+[stacktrace]
+#0 [internal function]: Symfony/Component/Mailer/Transport/Smtp/Stream/SocketStream->{closure:Symfony/Component/Mailer/Transport/Smtp/Stream/SocketStream::initialize():153}(2, 'stream_socket_client(): php_network_getaddresses: getaddrinfo for mailpit failed: /xD0/xAD/xD1/x82/xD0/xBE/xD1/x82 /xD1/x85/xD0/xBE/xD1/x81/xD1/x82 /xD0/xBD/xD0/xB5/xD0/xB8/xD0/xB7/xD0/xB2/xD0/xB5/xD1/x81/xD1/x82/xD0/xB5/xD0/xBD', 'C://OSPanel//home//forumap.local//vendor//symfony//mailer//Transport//Smtp//Stream//SocketStream.php', 157)
+#1 C:/OSPanel/home/forumap.local/vendor/symfony/mailer/Transport/Smtp/Stream/SocketStream.php(157): stream_socket_client('mailpit:1025', 0, '', 60.0, 4, Resource id #979)
+#2 C:/OSPanel/home/forumap.local/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(264): Symfony/Component/Mailer/Transport/Smtp/Stream/SocketStream->initialize()
+#3 C:/OSPanel/home/forumap.local/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(199): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->start()
+#4 C:/OSPanel/home/forumap.local/vendor/symfony/mailer/Transport/AbstractTransport.php(69): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->doSend(Object(Symfony/Component/Mailer/SentMessage))
+#5 C:/OSPanel/home/forumap.local/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(137): Symfony/Component/Mailer/Transport/AbstractTransport->send(Object(Symfony/Component/Mime/Email), Object(Symfony/Component/Mailer/DelayedEnvelope))
+#6 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(573): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->send(Object(Symfony/Component/Mime/Email), Object(Symfony/Component/Mailer/DelayedEnvelope))
+#7 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(335): Illuminate/Mail/Mailer->sendSymfonyMessage(Object(Symfony/Component/Mime/Email))
+#8 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Notifications/Channels/MailChannel.php(66): Illuminate/Mail/Mailer->send(Object(Closure), Array, Object(Closure))
+#9 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Notifications/NotificationSender.php(148): Illuminate/Notifications/Channels/MailChannel->send(Object(App/Models/User), Object(Illuminate/Auth/Notifications/ResetPassword))
+#10 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Notifications/NotificationSender.php(106): Illuminate/Notifications/NotificationSender->sendToNotifiable(Object(App/Models/User), '44e33249-c603-46bf-85e9-c59776723f50', Object(Illuminate/Auth/Notifications/ResetPassword), 'mail')
+#11 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Support/Traits/Localizable.php(19): Illuminate/Notifications/NotificationSender->{closure:Illuminate/Notifications/NotificationSender::sendNow():101}()
+#12 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Notifications/NotificationSender.php(101): Illuminate/Notifications/NotificationSender->withLocale(NULL, Object(Closure))
+#13 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Notifications/NotificationSender.php(79): Illuminate/Notifications/NotificationSender->sendNow(Object(Illuminate/Database/Eloquent/Collection), Object(Illuminate/Auth/Notifications/ResetPassword))
+#14 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Notifications/ChannelManager.php(39): Illuminate/Notifications/NotificationSender->send(Object(Illuminate/Database/Eloquent/Collection), Object(Illuminate/Auth/Notifications/ResetPassword))
+#15 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Notifications/RoutesNotifications.php(18): Illuminate/Notifications/ChannelManager->send(Object(App/Models/User), Object(Illuminate/Auth/Notifications/ResetPassword))
+#16 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Auth/Passwords/CanResetPassword.php(27): App/Models/User->notify(Object(Illuminate/Auth/Notifications/ResetPassword))
+#17 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Auth/Passwords/PasswordBroker.php(72): Illuminate/Foundation/Auth/User->sendPasswordResetNotification('3568c1e11915c2f2356f69af5a16a8fea9ba76b6d2f597eb1d83d8c140041956')
+#18 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Auth/Passwords/PasswordBrokerManager.php(143): Illuminate/Auth/Passwords/PasswordBroker->sendResetLink(Array)
+#19 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(355): Illuminate/Auth/Passwords/PasswordBrokerManager->__call('sendResetLink', Array)
+#20 C:/OSPanel/home/forumap.local/app/Http/Controllers/Auth/PasswordResetLinkController.php(17): Illuminate/Support/Facades/Facade::__callStatic('sendResetLink', Array)
+#21 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App/Http/Controllers/Auth/PasswordResetLinkController->store(Object(Illuminate/Http/Request))
+#22 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(43): Illuminate/Routing/Controller->callAction('store', Array)
+#23 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Route.php(259): Illuminate/Routing/ControllerDispatcher->dispatch(Object(Illuminate/Routing/Route), Object(App/Http/Controllers/Auth/PasswordResetLinkController), 'store')
+#24 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate/Routing/Route->runController()
+#25 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(806): Illuminate/Routing/Route->run()
+#26 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Routing/Router->{closure:Illuminate/Routing/Router::runRouteWithinStack():805}(Object(Illuminate/Http/Request))
+#27 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#28 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#29 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#30 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/VerifyCsrfToken->handle(Object(Illuminate/Http/Request), Object(Closure))
+#31 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#32 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/View/Middleware/ShareErrorsFromSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#33 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#34 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate/Session/Middleware/StartSession->handleStatefulRequest(Object(Illuminate/Http/Request), Object(Illuminate/Session/Store), Object(Closure))
+#35 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Session/Middleware/StartSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#36 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#37 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle(Object(Illuminate/Http/Request), Object(Closure))
+#38 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#39 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/EncryptCookies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#40 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#41 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#42 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#43 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#44 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#45 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#46 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->{closure:Illuminate/Foundation/Http/Kernel::dispatchToRouter():197}(Object(Illuminate/Http/Request))
+#47 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#48 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#49 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#50 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#51 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#52 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#53 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#54 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#55 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#56 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#57 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#58 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#59 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#60 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#61 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#62 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#63 C:/OSPanel/home/forumap.local/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#64 C:/OSPanel/home/forumap.local/public/index.php(51): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#65 {main}
+"} 
+[2026-04-30 14:39:42] local.INFO: Начало регистрации {"_token":"HT4A13AyVgoYEkYFLBAHBrvsL74fWY2j1paPwV1v","name":"Konstantin","login":"RTu","email":"raven_crows919@dollicons.com","password":"147852369","password_confirmation":"147852369"} 
+[2026-04-30 14:39:42] local.ERROR: Ошибки валидации {"password":["Пароль должен содержать заглавную букву, строчную букву и цифру"]} 
